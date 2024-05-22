@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+<div class="hi">
+   <h1>Book your preferred Date & Time</h1>
+   
+   <div class="but">
+    <div class="row" style="display: flex;">
+      <div class="col" style="display: block;">
+        <label>Choose Date</label>
+        <input type="date" [(ngModel)]="date">
+      </div>
+      <div class="col">
+        <label>Choose Slot</label>
+        <select [(ngModel)]="blogId">
+          <option>Choose slot</option>
+          <option *ngFor="let slot of slots" [value]="slot.slotId">{{slot.time}}</option>
+        </select>
+      </div>
+    </div>
+    <button (click)="onSubmit()">Book</button>
+  </div>
+ </div>

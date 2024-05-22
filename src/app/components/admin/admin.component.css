@@ -1,0 +1,106 @@
+.new-employee-button-container {
+  margin-bottom: 20px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.h1{
+  color: #3071b1;
+  top: 5%;
+}
+.hi {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url('/assets/background.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ 
+mat-table {
+  margin-left: 5%;
+  max-width: 10%;
+  padding: 5px;
+  border: 1px solid #91e776;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  background-color: rgba(29, 28, 28, 0.5);
+  color: #f4eeee;
+  font-size: 14px;
+}
+ 
+/* Header row styles */
+.mat-header-row {
+ 
+  color: #fff;
+ 
+ 
+}
+ 
+.mat-header-cell {
+  font-weight: bold;
+  padding: 10px;
+ display: flex;
+ color: #ffffff;
+}
+ 
+/* Data row styles */
+.mat-row {
+  background-color: transparent; /* Change the background color to transparent */
+}
+ 
+.mat-cell {
+  padding: 10px;
+  color: #ffffff; /* Change the text color to white */
+}
+ 
+/* Button styles */
+.mat-raised-button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+ 
+.mat-raised-button.mat-primary {
+  background-color: #007bff;
+}
+ 
+.mat-raised-button.mat-warn {
+  background-color: #dc3545;
+}
+ 
+.mat-raised-button:hover {
+  background-color: #555;
+}
+ 
+.mat-raised-button.mat-primary:hover {
+  background-color: #0069d9;
+}
+ 
+.mat-raised-button.mat-warn:hover {
+  background-color: #c82333;
+}
+ 
+input[type="text"] {
+  color: #3071b1;
+}
+ 
+input[type="text"]::placeholder {
+  color: #ffffff;
+}
+/* Target mat-cell elements to change the text color to white */
+mat-table mat-cell {
+  color: aquamarine; /* Set the text color to white */
+}
+/* Target mat-header-cell elements to change the text color to white */
+mat-table mat-header-cell {
+  color: #3071b1; /* Set the text color to white */
+}

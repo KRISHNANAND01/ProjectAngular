@@ -1,0 +1,16 @@
+.navbar {
+    background-color: #171e28;
+    padding: 1rem;
+  }
+  
+  .navbar-brand {
+    color: #f1faee;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-decoration: none; /* Remove underline */
+  }
+  .navbar-brand::before {
+    content: "\26BD";
+    margin-right: 0.5rem;
+    
+  }

@@ -1,0 +1,17 @@
+
+  <app-navbar></app-navbar>
+  <div class="bookings-container">
+    <div class="booking-tile" *ngFor="let booking of bookings">
+      <div>
+        <strong>Turf Name:</strong> <span class="red-text">{{ booking.turfName }}</span>
+      </div>
+      <div>
+        <strong>Booked Slot:</strong><span class="red-text"> {{ booking.slotName}}</span>
+      </div>
+      <div>
+        <strong>Booking Date:</strong><span class="red-text">{{ booking.date | date }}</span>
+      </div>
+      <button (click)="cancelBooking(booking.id)">Cancel Booking</button>
+      <hr>
+    </div>
+  </div>

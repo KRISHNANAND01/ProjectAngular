@@ -1,0 +1,68 @@
+
+   <app-home-navbar></app-home-navbar>
+   <div class="hi">
+    <div class="container">
+      <h2>Register</h2>
+      <form [formGroup]="registerForm"  (ngSubmit)="save()">
+        <div class="mb-3">
+          <label for="name">Name:</label>
+          <input type="text" formControlName="userName" name="name" id="name" required
+            class="form-control"
+            [ngClass]="{ 'is-invalid': f['userName'].touched && f['userName'].errors }"
+          />
+          <div *ngIf="f['userName'].touched && f['userName'].errors" class="invalid-feedback">
+            <div *ngIf="f['userName'].errors['required']">Name is required</div>
+          </div>
+        </div>
+  
+        <div class="mb-3">
+          <label for="email">Email Id:</label>
+          <input type="email" formControlName="email" name="email" id="email" required
+            class="form-control"
+            [ngClass]="{ 'is-invalid': f['email'].touched && f['email'].errors }"
+          />
+          <!-- <div *ngIf="f['email'].touched && f['email'].errors" class="invalid-feedback">
+            <div *ngIf="f['email'].errors['required']">Email is required</div>
+            <div *ngIf="f['email'].errors['email']">Email is invalid</div>
+          </div> -->
+          <div *ngIf="f['email'].touched && f['email'].errors" class="invalid-feedback">
+            <div *ngIf="f['email'].errors['required']">Email is required</div>
+            <div *ngIf="f['email'].errors['email']">Email is invalid</div>
+            <!-- Add this condition to check for the email pattern -->
+            <div *ngIf="f['email'].errors['pattern']">Email format is invalid (e.g., example&#64;domain.com)</div>
+          </div>
+        </div>
+  
+        <div class="mb-3">
+          <label for="password">Password:</label>
+          <input type="password" formControlName="password" name="password" id="password" required
+            class="form-control"
+            [ngClass]="{ 'is-invalid': f['password'].touched && f['password'].errors }"
+          />
+          <div *ngIf="f['password'].touched && f['password'].errors" class="invalid-feedback">
+            <div *ngIf="f['password'].errors['required']">Password is required</div>
+            <div *ngIf="f['password'].errors['minlength']">
+              Password must be at least 6 characters long
+            </div>
+          </div>
+        </div>
+  
+        <div class="mb-3">
+          <label for="phone">Phone Number:</label>
+          <input type="tel" formControlName="phone" id="phone" name="phone" placeholder="+91" required
+            class="form-control"
+            [ngClass]="{ 'is-invalid': f['phone'].touched && f['phone'].errors }"
+          />
+          <div *ngIf="f['phone'].touched && f['phone'].errors" class="invalid-feedback">
+            <div *ngIf="f['phone'].errors['required']">Phone number is required</div>
+            <div *ngIf="f['phone'].errors['pattern']">Invalid phone number format</div>
+          </div>
+        </div>
+  
+        <button type="submit" class="btn btn-primary" [disabled]="registerForm.invalid">
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+ 
